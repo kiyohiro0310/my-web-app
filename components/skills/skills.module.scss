@@ -1,0 +1,44 @@
+.skills{
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    color: #e1dad8;
+    background-color: #171010;
+    padding: 40px;
+
+    h1{
+        margin: 0;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        .box{
+            width: 350px;
+            height: 400px;
+            box-shadow: 2px 2px 7px #fff;
+            margin: 10px auto;
+            background-color: #423F3E;
+            color: #e1dad8;
+            cursor: pointer;
+
+            &:hover{
+                position: relative;
+                bottom: 10px;
+            }
+
+            h2{
+                margin: 10px;
+            }
+
+            p{
+                font-size: 18px;
+                line-height: 2rem;
+                text-align: left;
+                text-align: center;
+                margin-top: 5px;
+            }
+        }
+    }
+}
