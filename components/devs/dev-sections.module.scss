@@ -1,0 +1,51 @@
+.devs{
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    padding: 30px;
+    background-color: #423F3E;
+    color: #fff;
+
+    h1{
+        margin: 0 {
+            bottom: 10px
+        };
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+
+        .dev_item{
+            width: 40%;
+            height: 40vh;
+            margin: 10px auto;
+            box-shadow: 2px 2px 7px #fff;
+            overflow: hidden;
+
+            .img{
+                width: 100%;
+                overflow: hidden;
+                transition: 0.3s all ease-in-out;
+
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .devs{
+        .container {
+            .dev_item{
+                height: 40%;
+            }
+        }
+    }
+}
+
+.color{
+    color: rgb(172, 233, 40);
+}

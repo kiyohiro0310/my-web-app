@@ -5,7 +5,7 @@ import classes from "./main-navigation.module.scss";
 const MainNavigation = () => {
   return (
     <div className={classes.header}>
-        <div><h1><Link href="/">KIYO&apos;s BLOG</Link></h1></div>
+        <div><h1><Link href="/">KIYO&apos;S BLOG</Link></h1></div>
         <nav>
             <Link href="/skills"><a>Skills</a></Link>
             <Link href="/posts"><a>Posts</a></Link>

@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './intro.module.scss';
+import classes from './intro-section.module.scss';
 import Image from 'next/image';
 
 const Intro = () => {

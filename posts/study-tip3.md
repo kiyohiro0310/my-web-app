@@ -1,0 +1,26 @@
+---
+title: Sass
+description: How to make it easier to set responsive media screen
+image: sass.png
+date: '2022-4-8'
+---
+
+When we create responsive media query in css code, it usually takes long time to implement. However, if you use sass to implement it, it's going to be easier.
+
+```scss
+$breakpoints: (
+    xs: "screen and (max-width: 600px)",
+    s: "screen and (min-width: 600px)",
+    m: "screen and (min-width: 768px)",
+    l: "screen and (min-width: 992px)",
+    xl: "screen and (min-width: 1200px)",
+);
+
+@mixin media($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)}{
+        @content;
+    }
+}
+```
+
+Click [here]('https://sass-lang.com/documentation/cli/dart-sass') to learn more

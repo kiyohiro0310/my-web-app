@@ -1,7 +1,8 @@
 .main{
     width: 100%;
-    height: 60vh;
+    height: fit-content;
     background-color: #423F3E;
+    padding: 30px;
 
     .container{
         display: flex;
@@ -30,4 +31,20 @@
 
 .color{
     color: rgb(172, 233, 40);
+}
+
+@media screen and (max-width: 900px){
+    .main{
+        .container{
+            flex-direction: column-reverse;
+            padding: 0;
+            div:nth-child(1), div:nth-child(2){
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+                margin: 0;
+            }
+        }
+
+    }
 }
