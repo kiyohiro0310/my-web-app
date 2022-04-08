@@ -19,14 +19,11 @@ const MainFooter = () => {
                 <h1 className={classes.logo_name}>Kiyohiro</h1>
             </div>
             <div>
-
-
-                        <li><Link href="/skills">Skills</Link></li>
-                        <li><Link href="/posts">Posts</Link></li>
-                        <li><Link href="/devs">Devs</Link></li>
-                        <li><Link href="/contact">Contact</Link></li>
-
-
+            <li>
+                <Link href="/skills">Skills</Link></li>
+                <li><Link href="/posts">Posts</Link></li>
+                <li><Link href="/devs">Devs</Link></li>
+                <li><Link href="/contact">Contact</Link></li>
             </div>
             <div>
                 <div className={classes.details}>
