@@ -34,9 +34,7 @@ const MainFooter = () => {
                 </div>
             </div>
         </div>
-        <div>
-            <p>&copy;Kiyohiro Kambayashi</p>
-        </div>
+        <p className={classes.copy}>&copy;Kiyohiro Kambayashi</p>
     </div>
   )
 }

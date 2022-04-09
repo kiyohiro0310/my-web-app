@@ -48,8 +48,8 @@
                 padding: 5%;
                 font-size: 1.15rem;
             }
-
         }
+
 
         @media screen and (max-width: 1200px) {
             div{
@@ -67,6 +67,9 @@
                 }
             }
         }
+    }
+    .copy{
+        margin: 0;
     }
 }
 
