@@ -1,8 +1,18 @@
 import React from 'react'
+import classes from "../../components/skills/skills-page/skills-page.module.scss";
+import SkillsDBList from '../../components/skills/skills-page/skills-db-list'
+import SkillsFirstList from '../../components/skills/skills-page/skills-first-list'
+import SkillsJSList from '../../components/skills/skills-page/skills-js-list'
+import SkillsOtherList from '../../components/skills/skills-page/skills-others-list';
 
 const SkillPage = () => {
   return (
-    <div>SkillPage</div>
+    <div className={classes.main}>
+      <SkillsFirstList />
+      <SkillsJSList />
+      <SkillsDBList />
+      <SkillsOtherList />
+    </div>
   )
 }
 
