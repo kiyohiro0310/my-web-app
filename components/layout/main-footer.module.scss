@@ -59,7 +59,7 @@
                     font-size: 16px;
                 }
                 .img{
-                    width: 70%;
+                    width: 50%;
                 }
                 .details{
                     font-size: 0.85rem;
@@ -68,7 +68,9 @@
         }
         @media screen and (max-width: 600px) {
             div{
-
+                .img{
+                    width: 70%;
+                }
                 .details{
                     font-size: 0.75rem;
                 }
@@ -79,7 +81,6 @@
         padding: 5px{
             bottom: 0;
         };
-
         margin-bottom: 0;
     }
 }
