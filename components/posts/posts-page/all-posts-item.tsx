@@ -18,7 +18,7 @@ const AllPostsItem: NextPage<TypeProps> = (props) => {
       <Link href={linkPath}>
           <a className={classes.post_card}>
             <div className={classes.img}>
-              <Image src={imagePath} alt={description} width={280} height={200} />
+              <Image src={imagePath} alt={description} width={180} height={120} />
             </div>
             <div className={classes.description}>
               <h2>{title}</h2>

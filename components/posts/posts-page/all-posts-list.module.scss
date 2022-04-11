@@ -12,21 +12,61 @@
     }
 
     .post_list{
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-areas:
+        "div div div";
+        padding-bottom: 15px;
+
 
         .post_card {
-            width: 90%;
-            height: fit-content;
+            width: 360px;
+            height: 330px;
             background-color: #423F3E;
             color: #fff;
             margin: 20px auto;
             padding: 20px;
             box-shadow: 2px 2px 7px #fff;
+            overflow: hidden;
             transition: 0.3s;
 
             &:hover{
                 transform: scale(1.06);
+            }
+
+
+        }
+
+        @media screen and (max-width: 1095px) {
+            display: grid;
+            grid-template-areas:
+            "div div";
+            padding: 20px;
+
+            @media screen and (max-width: 700px) {
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .post_card{
+                width: 320px;
+                height: 320px;
+
+                @media screen and (max-width: 700px) {
+                    width: 80%;
+                    height: 300px;
+                }
+
+
+                .description{
+                    h2{
+                        font-size: 1.5rem;
+                    }
+                    h3{
+                        font-size: 1.1rem;
+                    }
+
+                }
             }
         }
     }
