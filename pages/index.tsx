@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import DevsSection from '../components/devs/devs-section';
 import IntroSection from '../components/introduction/intro-section'
@@ -26,7 +26,7 @@ const Home: NextPage<TypeProps> = (props) => {
   )
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = () => {
   const allFileContent = getAllFilesContent();
 
   return {

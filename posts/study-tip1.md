@@ -19,4 +19,4 @@ export async function getStaticProps() {
 }
 ```
 
-Click [here]('https://nextjs.org/docs/basic-features/data-fetching/get-static-props') to learn more
+Click [here](https://nextjs.org/docs/basic-features/data-fetching/get-static-props) to learn more.

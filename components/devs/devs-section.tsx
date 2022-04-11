@@ -12,14 +12,14 @@ const DevSection = () => {
         <Link href={"https://kiyohiro-abc-optical.netlify.app/"}>
           <a className={classes.dev_item}>
             <div className={classes.img}>
-              <Image src="/images/devs/abc_optical.png" alt="" width={100} height={58} layout="responsive"/>
+              <Image src="/images/devs/abc_optical.png" alt="image to ABC Optical" width={100} height={58} layout="responsive"/>
             </div>
           </a>
         </Link>
         <Link href={"https://kiyo-first-page.netlify.app/"}>
           <a className={classes.dev_item}>
             <div className={classes.img}>
-              <Image src="/images/devs/first_page.png" alt="" width={100} height={58} layout="responsive"/>
+              <Image src="/images/devs/first_page.png" alt="image to my first web page" width={100} height={58} layout="responsive"/>
             </div>
 
           </a>

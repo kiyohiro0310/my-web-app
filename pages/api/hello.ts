@@ -1,13 +1,13 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { ContentModel } from '../../Model/dev-content-model';
 
-type Data = {
-  name: string
-}
 
-export default function handler(
+async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse<ContentModel[]>
 ) {
-  res.status(200).json({ name: 'John Doe' })
+
 }
+
+export default handler;

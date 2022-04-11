@@ -30,4 +30,4 @@ const NextTsx: NextPage<TypeProps> = (props) => {
 export default NextTsx;
 ```
 
-Click [here]('https://nextjs.org/docs/basic-features/typescript') to learn more
+Click [here](https://nextjs.org/docs/basic-features/typescript) to learn more Next.js with typescript

@@ -23,4 +23,4 @@ $breakpoints: (
 }
 ```
 
-Click [here]('https://sass-lang.com/documentation/cli/dart-sass') to learn more
+Click [here]('https://sass-lang.com/documentation/cli/dart-sass') to learn more Sass

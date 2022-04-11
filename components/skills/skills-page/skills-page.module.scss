@@ -3,6 +3,9 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    background-color: #2B2B2B;
+    color: #fff;
+
 
     @media screen and (max-width: 1050px) {
         font-size: 0.78rem;
@@ -12,9 +15,11 @@
     .container {
         width: 90%;
         height: fit-content;
-        box-shadow: 2px 2px 7px #000;
+        box-shadow: 2px 2px 7px #fff;
         margin: 30px auto;
         padding: 20px;
+        background-color: #423F3E;
+        color: #fff;
     }
 
     .list{
@@ -129,4 +134,8 @@
     }
 
 
+}
+
+.color{
+    color: rgb(172, 233, 40);
 }

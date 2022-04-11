@@ -8,6 +8,7 @@ import SkillsOtherList from '../../components/skills/skills-page/skills-others-l
 const SkillPage = () => {
   return (
     <div className={classes.main}>
+      <h1>All Useable <span className={classes.color}>Skills</span></h1>
       <SkillsFirstList />
       <SkillsJSList />
       <SkillsDBList />

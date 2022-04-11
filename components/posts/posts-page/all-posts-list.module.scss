@@ -1,0 +1,37 @@
+.main {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    background-color: #2B2B2B;
+    color: #fff;
+
+
+    h1{
+        margin: 0;
+        padding: 20px;
+    }
+
+    .post_list{
+        display: flex;
+        flex-direction: column;
+
+        .post_card {
+            width: 90%;
+            height: fit-content;
+            background-color: #423F3E;
+            color: #fff;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 2px 2px 7px #fff;
+            transition: 0.3s;
+
+            &:hover{
+                transform: scale(1.06);
+            }
+        }
+    }
+}
+
+.color{
+    color: rgb(172, 233, 40);
+}
