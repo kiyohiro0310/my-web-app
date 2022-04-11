@@ -18,19 +18,19 @@ const SkillsJSList = () => {
       </Link>
 
       <div className={classes.list}>
-        <Link href="https://www.w3schools.com/html/">
+        <Link href="https://jquery.com/">
           <a className={classes.box}>
             <Image src="/images/skills/skills-page/js/jquery.png" alt="jquery image" width={170} height={170}/>
             <h2>jQuery</h2>
           </a>
         </Link>
-        <Link href="https://www.w3schools.com/css/">
+        <Link href="https://expressjs.com/">
           <a className={classes.box}>
             <Image src="/images/skills/skills-page/js/nodejs.png" alt="express image" width={170} height={170}/>
             <h2>Express</h2>
           </a>
         </Link>
-        <Link href="https://sass-lang.com/documentation/cli/dart-sass">
+        <Link href="https://www.typescriptlang.org/">
           <a className={classes.box}>
             <Image src="/images/skills/skills-page/js/typescript.png" alt="typescript image" width={170} height={170}/>
             <h2>TypeScript</h2>
