@@ -23,16 +23,18 @@
                 font-family: cursive;
                 margin: 0;
             }
-            li{
-                list-style-type: none;
-                margin: 43px{
-                };
-                font-size: 18px;
+            ul{
+                li{
+                    list-style-type: none;
+                    margin: 43px{
+                    };
+                    font-size: 18px;
 
-                &:hover{
-                    text-decoration: underline;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+
                 }
-
             }
             .img{
                 width: 50%;
@@ -53,10 +55,11 @@
         @media screen and (max-width: 1200px) {
             div{
                 height: 220px;
-
-                li{
-                    margin: 30px;
-                    font-size: 16px;
+                ul{
+                    li{
+                        margin: 30px;
+                        font-size: 16px;
+                    }
                 }
                 .img{
                     width: 50%;
