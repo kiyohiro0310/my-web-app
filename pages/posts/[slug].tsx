@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import React from 'react'
+import Head from 'next/head';
 import { FileModel } from '../../Model/file-model'
 import { getAllFiles, getOneFileContent } from '../../lib/post-utils';
 import { ParsedUrlQuery } from 'querystring';
@@ -14,22 +15,21 @@ import js from "react-syntax-highlighter/dist/cjs/languages/prism/javascript";
 import ts from "react-syntax-highlighter/dist/cjs/languages/prism/typescript";
 import css from "react-syntax-highlighter/dist/cjs/languages/prism/css";
 import scss from "react-syntax-highlighter/dist/cjs/languages/prism/scss";
+import jsx from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";
 import tsx from "react-syntax-highlighter/dist/cjs/languages/prism/tsx";
-import Head from 'next/head';
 
 SyntaxHighlighter.registerLanguage("js", js);
+SyntaxHighlighter.registerLanguage("jsx", jsx);
 SyntaxHighlighter.registerLanguage("ts", ts);
+SyntaxHighlighter.registerLanguage("tsx", tsx);
 SyntaxHighlighter.registerLanguage("css", css);
 SyntaxHighlighter.registerLanguage("scss", scss);
-SyntaxHighlighter.registerLanguage("tsx", tsx);
 
 interface TypeProps {
   content: FileModel;
 }
 const PostDetail: NextPage<TypeProps> = (props) => {
   const { slug, title, description, image, date, content } = props.content;
-
-  const imagePath = `/images/posts/${slug}/${image}`;
 
   const customRenderers = {
     p(paragraph: any) {

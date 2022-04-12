@@ -30,7 +30,7 @@ export function templateForContent(
 ${content}
 
 \`\`\`${lang}
-    ${coding}
+${coding}
 \`\`\`
 
 Click [here](${link}) to learn more.`

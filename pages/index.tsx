@@ -4,6 +4,7 @@ import DevsSection from '../components/devs/devs-section';
 import IntroSection from '../components/introduction/intro-section'
 import PostSection from '../components/posts/post-section';
 import SkillSection from '../components/skills/skills-section';
+import { connectToDatabase, createFiles, getAllDBContent } from '../lib/db-utils';
 import { getAllFilesContent } from '../lib/post-utils';
 import { FileModel } from '../Model/file-model';
 
@@ -26,12 +27,18 @@ const Home: NextPage<TypeProps> = (props) => {
   )
 }
 
-export const getStaticProps: GetStaticProps = () => {
-  const allFileContent = getAllFilesContent();
+export const getStaticProps: GetStaticProps = async () => {
+  const client = await connectToDatabase();
+
+  const allFilesContent = await getAllDBContent(client, "LearnPosts");
+
+  createFiles(allFilesContent)
+
+  const allPostsContent = getAllFilesContent();
 
   return {
     props: {
-      allPostsContent: allFileContent
+      allPostsContent: allPostsContent
     },
     revalidate: 600
   }
