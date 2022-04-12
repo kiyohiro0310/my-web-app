@@ -1,9 +1,14 @@
 .detail_main{
     width: 100%;
+    height: fit-content;
     text-align: center;
     color: #fff;
     background-color: #2B2B2B;
     padding: 20px;
+    @media screen and (min-height: 1000px) {
+        height: 70vh;
+    }
+
 
     h1{
         margin: 0;

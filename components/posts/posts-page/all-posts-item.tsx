@@ -4,21 +4,21 @@ import Link from 'next/link';
 import React from 'react'
 import { FileModel } from '../../../Model/file-model'
 import Image from "next/image";
+import { PostTemplate } from '../../../lib/post-template';
 
 interface TypeProps {
     post: FileModel;
 }
 const AllPostsItem: NextPage<TypeProps> = (props) => {
-    const { slug, title, description, image, date, content } = props.post;
+    const { slug ,title, description, image, date, content } = props.post;
 
-    const imagePath = `/images/posts/${slug}/${image}`;
     const linkPath = `/posts/${slug}`;
 
     return (
       <Link href={linkPath}>
           <a className={classes.post_card}>
             <div className={classes.img}>
-              <Image src={imagePath} alt={description} width={180} height={120} />
+              <Image src={image} alt={description} width={180} height={120} />
             </div>
             <div className={classes.description}>
               <h2>{title}</h2>

@@ -64,7 +64,7 @@ const PostDetail: NextPage<TypeProps> = (props) => {
         <div className={classes.detail_header}>
           <h1>{title}</h1>
           <div className={classes.img}>
-            <Image src={imagePath} alt={`${title} image`} width={120} height={70}/>
+            <Image src={image} alt={`${title} image`} width={120} height={70}/>
           </div>
         </div>
         <time>{date}</time>

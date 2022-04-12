@@ -3,6 +3,7 @@ import { NextPage } from 'next'
 import React from 'react'
 import { FileModel } from '../../../Model/file-model'
 import AllPostsItem from './all-posts-item'
+import { PostTemplate } from '../../../lib/post-template';
 
 interface TypeProps {
   posts: FileModel[]
