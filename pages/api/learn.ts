@@ -26,6 +26,7 @@ async function handler(
 
     }catch(error){
       res.status(500).json({message: "Insertion failed."});
+      client.close();
       return;
     }
   }
