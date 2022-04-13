@@ -10,6 +10,7 @@ const MainNavigation = () => {
             <Link href="/skills"><a>Skills</a></Link>
             <Link href="/posts"><a>Posts</a></Link>
             <Link href="/devs"><a>Devs</a></Link>
+            <Link href="/learn"><a>Learn</a></Link>
             <Link href="/contact"><a>Contact</a></Link>
         </nav>
     </div>

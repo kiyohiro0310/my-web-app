@@ -23,6 +23,7 @@ const MainFooter = () => {
                     <li><Link href="/skills">Skills</Link></li>
                     <li><Link href="/posts">Posts</Link></li>
                     <li><Link href="/devs">Devs</Link></li>
+                    <li><Link href="/learn">Learn</Link></li>
                     <li><Link href="/contact">Contact</Link></li>
                 </ul>
             </div>
