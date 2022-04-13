@@ -6,10 +6,10 @@ import classes from "./skills-page.module.scss";
 const SkillsFirstList = () => {
   return (
     <div className={classes.container}>
-        <div className={classes.subHeader}>
-          <div className={classes.img}>
+      <div className={classes.subHeader}>
+        <div className={classes.img}>
           <Image src="/images/skills/skills-page/first/front_logo.png" alt="labtop image" width={100} height={100}/>
-         </div>
+        </div>
         <div className={classes.img_description}>
           <h1>Front side</h1>
         </div>
