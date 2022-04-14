@@ -11,10 +11,9 @@ interface TypeProps {
 const LearnForm: NextPage<TypeProps> = (props) => {
     const titleRef = React.createRef<HTMLInputElement>();
     const descriptionRef = React.createRef<HTMLTextAreaElement>();
-    const imageRef = React.createRef<HTMLInputElement>();
     const dateRef = React.createRef<HTMLInputElement>();
     const contentRef = React.createRef<HTMLTextAreaElement>();
-    const langRef = React.createRef<HTMLInputElement>();
+    const langRef = React.createRef<HTMLSelectElement>();
     const codeRef = React.createRef<HTMLTextAreaElement>();
     const linkRef = React.createRef<HTMLInputElement>();
 
@@ -26,7 +25,6 @@ const LearnForm: NextPage<TypeProps> = (props) => {
 
         const enteredTitle = titleRef.current!.value;
         const enteredDescription = descriptionRef.current!.value;
-        const enteredImage = imageRef.current!.value;
         const enteredDate = dateRef.current!.value;
         const enteredContent = contentRef.current!.value;
         const enteredLang = langRef.current!.value;
@@ -41,7 +39,6 @@ const LearnForm: NextPage<TypeProps> = (props) => {
 
         if(enteredTitle
             && enteredDescription
-            && enteredImage
             && enteredDate
             && enteredContent
             && enteredLang
@@ -51,7 +48,7 @@ const LearnForm: NextPage<TypeProps> = (props) => {
                 const newPost = {
                     title: enteredTitle.trim(),
                     description: enteredDescription.trim(),
-                    image: enteredImage.trim(),
+                    image: `${enteredLang.trim()}.png`,
                     date: enteredDate.trim(),
                     content: enteredContent.trim(),
                     lang: enteredLang.trim(),
@@ -60,7 +57,7 @@ const LearnForm: NextPage<TypeProps> = (props) => {
                 }
 
                 props.onAdd(newPost);
-                router.push("/");
+                router.replace("/");
 
             }
         }
@@ -77,10 +74,6 @@ const LearnForm: NextPage<TypeProps> = (props) => {
                 <textarea id='description' rows={3} placeholder='How to use getStaticProps() in Next.js.' ref={descriptionRef} required/>
             </div>
             <div className={classes.input_section}>
-                <label htmlFor="image">Image URL</label>
-                <input type="url" id='image' placeholder='Copy link of image source, not from your folder.' ref={imageRef} required/>
-            </div>
-            <div className={classes.input_section}>
                 <label htmlFor="date">Date</label>
                 <input type="text" id='date' placeholder='2022-4-6' ref={dateRef} required/>
             </div>
@@ -90,8 +83,20 @@ const LearnForm: NextPage<TypeProps> = (props) => {
             </div>
             <div className={classes.input_section}>
                 <label htmlFor="code">Code</label>
-                <input type="text" id="lang" placeholder='js, jsx, tsx, etc.' className={classes.lang} ref={langRef} required/>
-                <textarea id='code' rows={10} placeholder='Paste your code or write here' className={classes.code} ref={codeRef} required/>
+                <select name="code" id="code" className={classes.lang} ref={langRef}>
+                    <option value="html">html</option>
+                    <option value="css">css</option>
+                    <option value="scss">sass</option>
+
+                    <option value="js">js</option>
+                    <option value="jsx">jsx</option>
+
+                    <option value="ts">ts</option>
+                    <option value="tsx">tsx</option>
+
+                    <option value="sql">sql</option>
+                </select>
+                <textarea id='code' rows={15} placeholder='Paste your code or write here' className={classes.code} ref={codeRef} required/>
             </div>
             <div className={classes.input_section}>
                 <label htmlFor="link">Link</label>

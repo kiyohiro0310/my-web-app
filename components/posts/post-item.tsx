@@ -14,13 +14,14 @@ interface TypeProps {
 const PostItem: NextPage<TypeProps> = (props) => {
   const { title, description, image, date, slug, content } = props.postContent;
 
+  const imagePath = `/images/posts/${image}`;
   const linkPath = `/posts/${slug}`;
 
   return (
     <Link href={linkPath}>
         <a className={classes.post_card}>
           <div className={classes.img}>
-            <Image src={image} alt={description} width={280} height={200} layout="responsive"/>
+            <Image src={imagePath} alt={description} width={280} height={200} layout="responsive"/>
           </div>
           <div className={classes.description}>
             <h2>{title}</h2>

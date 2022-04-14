@@ -17,6 +17,8 @@ import css from "react-syntax-highlighter/dist/cjs/languages/prism/css";
 import scss from "react-syntax-highlighter/dist/cjs/languages/prism/scss";
 import jsx from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";
 import tsx from "react-syntax-highlighter/dist/cjs/languages/prism/tsx";
+import sql from "react-syntax-highlighter/dist/cjs/languages/prism/sql";
+
 
 SyntaxHighlighter.registerLanguage("js", js);
 SyntaxHighlighter.registerLanguage("jsx", jsx);
@@ -24,6 +26,7 @@ SyntaxHighlighter.registerLanguage("ts", ts);
 SyntaxHighlighter.registerLanguage("tsx", tsx);
 SyntaxHighlighter.registerLanguage("css", css);
 SyntaxHighlighter.registerLanguage("scss", scss);
+SyntaxHighlighter.registerLanguage("sql", sql);
 
 interface TypeProps {
   content: FileModel;
@@ -31,6 +34,7 @@ interface TypeProps {
 const PostDetail: NextPage<TypeProps> = (props) => {
   const { slug, title, description, image, date, content } = props.content;
 
+  const imagePath = `/images/posts/${image}`;
   const customRenderers = {
     p(paragraph: any) {
         const { node } = paragraph;
@@ -38,7 +42,7 @@ const PostDetail: NextPage<TypeProps> = (props) => {
             const image = node.children[0];
             return (
                 <div className={classes.image}>
-                    <Image src={`/images/posts/${slug}/${image.properties.src}`} alt={image.alt} width={600} height={300}/>
+                    <Image src={`/images/posts/${image.properties.src}`} alt={image.alt} width={600} height={300}/>
                 </div>
             )
         }
@@ -64,7 +68,7 @@ const PostDetail: NextPage<TypeProps> = (props) => {
         <div className={classes.detail_header}>
           <h1>{title}</h1>
           <div className={classes.img}>
-            <Image src={image} alt={`${title} image`} width={120} height={70}/>
+            <Image src={imagePath} alt={`${title} image`} width={120} height={70}/>
           </div>
         </div>
         <time>{date}</time>

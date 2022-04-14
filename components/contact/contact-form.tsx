@@ -50,6 +50,7 @@ const ContactForm = () => {
         message: "Sent your message successfully!",
         status: "success"
       })
+      router.replace("/");
     })
     .catch(error => {
       notificationCtx.showNotification({
@@ -58,7 +59,6 @@ const ContactForm = () => {
         status: "error"
       });
     })
-    router.push("/");
   }
 
   return (
