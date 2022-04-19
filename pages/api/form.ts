@@ -3,6 +3,7 @@ import { addToDatabase, connectToDatabase } from "../../lib/db-utils";
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const { name, title, message } = req.body;
+    const newMessage = { name, title, message };
 
     if(req.method === "POST"){
         let client;
@@ -16,7 +17,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         }
 
         try{
-            const result = await addToDatabase(client, "ContactMessage", {name, title, message});
+            const result = await addToDatabase(client, "ContactMessage", newMessage);
             res.status(200).json({data: result});
             client.close();
 

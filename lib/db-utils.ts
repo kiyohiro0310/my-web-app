@@ -52,7 +52,7 @@ export const createFiles = async (contents: WithId<PostTemplate>[] | any) => {
 
 }
 
-export const addToDatabase = async (client:MongoClient, collection: string, postData: any) => {
+export const addToDatabase = async (client:MongoClient, collection: string, postData: {}) => {
   const db = client.db();
 
   const result = db.collection(collection).insertOne(postData);
