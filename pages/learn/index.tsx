@@ -9,6 +9,7 @@ const LearnPage = () => {
 
 
     function addData(fileData: PostTemplate){
+
         fetch("/api/learn", {
             method: "POST",
             body: JSON.stringify(fileData),
@@ -18,7 +19,7 @@ const LearnPage = () => {
         })
         .then(res => {
             if(res.ok){
-                res.json()
+                res.json();
             }else{
                 res.json().then(data => {
                     throw new Error(data.message || "Error!");

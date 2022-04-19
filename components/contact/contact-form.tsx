@@ -1,17 +1,27 @@
 import React, { FormEvent, useContext } from 'react'
-import NotificationContext from '../notification/notification-context';
 import classes from './contact.module.scss'
 import { useRouter } from 'next/router';
+import { TypeMessage } from '../../Model/dev-content-model';
+import { NextPage } from 'next';
+import NotificationContext from '../notification/notification-context';
 
-const ContactForm = () => {
+interface TypeProps {
+  onAdd: (newMessage: TypeMessage) => void;
+}
+const ContactForm: NextPage<TypeProps> = (props) => {
   const nameRef = React.createRef<HTMLInputElement>();
   const mailRef = React.createRef<HTMLInputElement>();
   const messageRef = React.createRef<HTMLTextAreaElement>();
+
   const router = useRouter();
   const notificationCtx = useContext(NotificationContext);
 
   function submitHandler(event: FormEvent) {
     event.preventDefault();
+
+    const enteredName = nameRef.current!.value;
+    const enteredEmail = mailRef.current!.value;
+    const enteredMessage = messageRef.current!.value;
 
     notificationCtx.showNotification({
       title: "Sending",
@@ -19,47 +29,20 @@ const ContactForm = () => {
       status: "pending"
     });
 
-    const enteredName = nameRef.current!.value;
-    const enteredEmail = mailRef.current!.value;
-    const enteredMessage = messageRef.current!.value;
-
-
-    fetch("/api/form", {
-      method: "POST",
-      body: JSON.stringify({
+    if(enteredName && enteredEmail && enteredMessage){
+      const newMessage = {
         name: enteredName.trim(),
         mail: enteredEmail.trim(),
         message: enteredMessage.trim()
-      }),
-      headers: {
-        "Content-Type": "applicaton/json"
       }
-    })
-    .then(res => {
-      if(res.ok){
-        return res.json()
-      }else{
-        res.json().then(data => {
-          throw new Error(data.message || "Error");
-        })
-      }
-    })
-    .then(data => {
-      notificationCtx.showNotification({
-        title: "Success!",
-        message: "Sent your message successfully!",
-        status: "success"
-      })
+
+      props.onAdd(newMessage);
       router.replace("/");
-    })
-    .catch(error => {
-      notificationCtx.showNotification({
-        title: "Failed",
-        message: error || "Sending message failed...",
-        status: "error"
-      });
-    })
+
+    }
   }
+
+
 
   return (
     <div className={classes.container}>

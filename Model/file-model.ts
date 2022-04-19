@@ -6,3 +6,4 @@ export interface FileModel {
     slug: string;
     content: string;
 }
+

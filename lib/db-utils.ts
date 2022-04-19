@@ -3,7 +3,7 @@ import { PostTemplate, templateForContent } from "./post-template";
 import fs from "fs";
 
 export async function connectToDatabase() {
-    const client = await MongoClient.connect("mongodb+srv://Kiyohiro:a1b2c3d4e5A@cluster0.mvh0o.mongodb.net/KiyoWebApp?retryWrites=true&w=majority");
+    const client = await MongoClient.connect("mongodb+srv://Kiyohiro:tdrX9my4ycLZBT0i@cluster0.mvh0o.mongodb.net/KiyoWebApp?retryWrites=true&w=majority");
 
     return client;
 }
@@ -11,7 +11,7 @@ export async function connectToDatabase() {
 export const getAllDBContent = async (client: MongoClient, collection: string) => {
     const db = client.db();
 
-    const allDBContents = db.collection(collection).find().toArray();
+    const allDBContents = await db.collection(collection).find().toArray();
 
     return allDBContents;
 }
@@ -52,10 +52,10 @@ export const createFiles = async (contents: WithId<PostTemplate>[] | any) => {
 
 }
 
-export const addToDatabase = async (client:MongoClient, collection: string, postData: {}) => {
+export const addToDatabase = async (client: MongoClient, collection: string, postData: any) => {
   const db = client.db();
 
-  const result = db.collection(collection).insertOne(postData);
+  const result = await db.collection(collection).insertOne(postData);
 
   return result;
 }

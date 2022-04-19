@@ -1,9 +1,8 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { addToDatabase, connectToDatabase } from "../../lib/db-utils";
 
-const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-    const { name, title, message } = req.body;
-    const newMessage = { name, title, message };
+async function handler(req: NextApiRequest, res: NextApiResponse) {
+    const newMessage = req.body;
 
     if(req.method === "POST"){
         let client;
@@ -12,7 +11,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             client = await connectToDatabase();
 
         }catch(error){
-            res.status(500).json({message: "Error occurred. Closing database."});
+            res.status(500).json({message: "Connection failed"});
             return;
         }
 

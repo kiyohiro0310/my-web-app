@@ -7,3 +7,9 @@ export interface ContentModel {
     description: string;
     link: string;
 }
+
+export interface TypeMessage{
+    name: string;
+    mail: string;
+    message: string;
+  }
