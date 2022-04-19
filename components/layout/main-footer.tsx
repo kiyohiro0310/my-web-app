@@ -19,13 +19,13 @@ const MainFooter = () => {
                 <h1 className={classes.logo_name}>Kiyohiro</h1>
             </div>
             <div>
-                <ul>
-                    <li><Link href="/skills">Skills</Link></li>
-                    <li><Link href="/posts">Posts</Link></li>
-                    <li><Link href="/devs">Devs</Link></li>
-                    <li><Link href="/learn">Learn</Link></li>
-                    <li><Link href="/contact">Contact</Link></li>
-                </ul>
+                <nav>
+                    <Link href="/skills"><a>Skills</a></Link>
+                    <Link href="/posts"><a>Posts</a></Link>
+                    <Link href="/devs"><a>Devs</a></Link>
+                    <Link href="/learn"><a>Learn</a></Link>
+                    <Link href="/contact"><a>Contact</a></Link>
+                </nav>
             </div>
             <div>
                 <div className={classes.details}>

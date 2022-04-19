@@ -23,11 +23,12 @@
                 font-family: cursive;
                 margin: 0;
             }
-            ul{
-                li{
-                    list-style-type: none;
-                    margin: 28px{
-                    };
+            nav{
+                display: flex;
+                flex-direction: column;
+                margin-top: 25px;
+                a{
+                    margin: 14px auto;
                     font-size: 18px;
 
                     &:hover{
@@ -55,9 +56,12 @@
         @media screen and (max-width: 1200px) {
             div{
                 height: 220px;
-                ul{
-                    li{
-                        margin: 25px;
+                nav{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 12px;
+                    a{
+                        margin: 10px auto;
                         font-size: 16px;
                     }
                 }
@@ -71,6 +75,11 @@
         }
         @media screen and (max-width: 600px) {
             div{
+                nav{
+                    a{
+                        font-size: 14px;
+                    }
+                }
                 .img{
                     width: 70%;
                 }
