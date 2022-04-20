@@ -25,7 +25,7 @@
             display: inline-block;
 
             &:hover{
-                text-decoration: underline;
+                text-decoration: 3px underline rgb(172, 233, 40);
             }
         }
         .menu, .menu_close{
@@ -81,7 +81,7 @@
             margin: 0;
 
         a {
-                width: 100%;
+                width: fit-content;
                 padding: 10px;
                 margin: 3px auto;
                 font-weight: bold;
