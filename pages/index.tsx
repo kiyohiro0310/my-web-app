@@ -32,7 +32,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const allFilesContent = await getAllDBContent(client, "LearnPosts");
 
-  createFiles(allFilesContent)
+  createFiles(allFilesContent);
 
   const allPostsContent = getAllFilesContent();
 
