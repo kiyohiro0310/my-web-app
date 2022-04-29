@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from 'next'
+import type { GetServerSideProps, GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import DevsSection from '../components/devs/devs-section';
 import IntroSection from '../components/introduction/intro-section'
@@ -27,7 +27,7 @@ const Home: NextPage<TypeProps> = (props) => {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const client = await connectToDatabase();
 
   const allFilesContent = await getAllDBContent(client, "LearnPosts");
@@ -39,8 +39,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       allPostsContent: allPostsContent
-    },
-    revalidate: 1
+    }
   }
 }
 
