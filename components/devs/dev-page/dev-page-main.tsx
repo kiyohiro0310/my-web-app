@@ -17,7 +17,7 @@ const DevPage: NextPage= () => {
       },
       {
           "id": "a00002",
-          "title": "My Frist Page",
+          "title": "My First Page",
           "date": "2022-2-8",
           "imgPath": "/images/devs/first_page.png",
           "description": "This single web page is created for practice html and css. I leard how from Udemy.",
