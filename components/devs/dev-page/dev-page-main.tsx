@@ -17,11 +17,11 @@ const DevPage: NextPage= () => {
       },
       {
           "id": "a00002",
-          "title": "My First Page",
+          "title": "Three.js and gsap website",
           "date": "2022-2-8",
-          "imgPath": "/images/devs/first_page.png",
-          "description": "This single web page is created for practice html and css. I leard how from Udemy.",
-          "link": "https://kiyo-first-page.netlify.app/"
+          "imgPath": "/images/devs/three-gsap.png",
+          "description": "This single web page is created for practice three.js and gsap. I learnd how from Udemy.",
+          "link": "https://three-gsap.vercel.app/"
       }
     ]
 
