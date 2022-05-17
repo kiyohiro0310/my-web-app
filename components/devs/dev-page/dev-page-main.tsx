@@ -21,7 +21,7 @@ const DevPage: NextPage= () => {
           "date": "2022-5-11",
           "imgPath": "/images/devs/three-gsap.png",
           "description": "This single web page is created for practice three.js and gsap. I learnd how from Udemy.",
-          "link": "https://three-gsap.vercel.app/"
+          "link": "https://kiyodev31.vercel.app/"
       },
       {
         "id": "a00003",
@@ -29,10 +29,9 @@ const DevPage: NextPage= () => {
         "date": "2022-2-8",
         "imgPath": "/images/devs/first_page.png",
         "description": "This single web page is created for practice html and css. I learnd how from Udemy.",
-        "link": "https://kiyodev31.vercel.app/"
+        "link": "https://kiyo-first-page.netlify.app/"
     }
   ]
-
 
   return (
     <div className={classes.list}>

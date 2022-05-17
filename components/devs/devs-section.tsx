@@ -16,7 +16,7 @@ const DevSection = () => {
             </div>
           </a>
         </Link>
-        <Link href={"https://three-gsap.vercel.app/"}>
+        <Link href={"https://kiyodev31.vercel.app/"}>
           <a className={classes.dev_item}>
             <div className={classes.img}>
               <Image src="/images/devs/three-gsap.png" alt="image to dev web page" width={100} height={58} layout="responsive"/>
