@@ -29,7 +29,7 @@ const DevPage: NextPage= () => {
         "date": "2022-2-8",
         "imgPath": "/images/devs/first_page.png",
         "description": "This single web page is created for practice html and css. I learnd how from Udemy.",
-        "link": "https://kiyo-first-page.netlify.app/"
+        "link": "https://kiyodev31.vercel.app/"
     }
   ]
 
